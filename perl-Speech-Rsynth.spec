@@ -19,7 +19,7 @@ Source0:	http://www.ling.uni-potsdam.de/~moocow/projects/spsyn/%{pdir}-%{pnam}-%
 BuildRequires:	gdbm-devel
 BuildRequires:	librsynth-devel >= 2.2.1
 %{?with_tests:BuildRequires:	librsynth-dict-beep}
-BuildRequires:	perl-devel >= 5.6
+BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
