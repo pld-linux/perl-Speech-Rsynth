@@ -1,6 +1,7 @@
 #
 # Conditional build:
-# _with_tests - perform "make test" (uses auto device, requires /usr/lib/dict/bDict.db)
+%bcond_with	tests	# perform "make test"
+			# (uses auto device, requires /usr/lib/dict/bDict.db)
 #
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Speech
@@ -8,15 +9,15 @@
 Summary:	Speech::Rsynth Perl module - interface to librsynth speech synthesis library
 Summary(pl):	Modu³ perla Speech::Rsynth - interfejs do biblioteki syntezy mowy librsynth
 Name:		perl-Speech-Rsynth
-Version:	0.03
-Release:	2
+Version:	0.04
+Release:	1
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	2066f39329eb04043644e124a9ef5615
+Source0:	http://www.ling.uni-potsdam.de/~moocow/projects/spsyn/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	5c3e75c4bba2edd6c00a3fac773099ca
 BuildRequires:	gdbm-devel
-BuildRequires:	librsynth-devel >= 2.1.4
-%{?_with_tests:BuildRequires:	librsynth-dict-beep}
+BuildRequires:	librsynth-devel >= 2.2.1
+%{?with_tests:BuildRequires:	librsynth-dict-beep}
 BuildRequires:	perl-devel >= 5.6
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -42,9 +43,10 @@ na urz±dzenie d¼wiêkowe.
 %build
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
-%{__make} OPTIMIZE="%{rpmcflags}"
+%{__make} \
+	OPTIMIZE="%{rpmcflags}"
 
-%{?_with_tests:%{__make} test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
