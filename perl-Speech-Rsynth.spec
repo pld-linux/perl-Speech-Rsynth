@@ -13,6 +13,7 @@ Release:	2
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+BuildRequires:	gdbm-devel
 BuildRequires:	librsynth-devel >= 2.1.4
 %{?_with_tests:BuildRequires:	librsynth-dict-beep}
 BuildRequires:	perl >= 5.6
