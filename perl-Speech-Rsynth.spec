@@ -12,7 +12,7 @@ Version:	0.03
 Release:	1
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
-Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	librsynth-devel >= 2.1.4
 %{?_with_tests:BuildRequires:	librsynth-dict-beep}
 BuildRequires:	perl >= 5.6
