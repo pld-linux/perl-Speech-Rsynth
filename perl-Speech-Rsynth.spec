@@ -38,7 +38,7 @@ na urz±dzenie d¼wiêkowe.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-perl Makefile.PL
+%{__perl} Makefile.PL
 %{__make} OPTIMIZE="%{rpmcflags}"
 
 %{?_with_tests:%{__make} test}
