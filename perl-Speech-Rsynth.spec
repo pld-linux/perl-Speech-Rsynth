@@ -11,7 +11,8 @@ Summary(pl):	Modu³ perla Speech::Rsynth - interfejs do biblioteki syntezy mowy l
 Name:		perl-Speech-Rsynth
 Version:	0.04
 Release:	1
-License:	GPL/Artistic
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.ling.uni-potsdam.de/~moocow/projects/spsyn/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	5c3e75c4bba2edd6c00a3fac773099ca
