@@ -9,14 +9,14 @@ Summary:	Speech::Rsynth Perl module - interface to librsynth speech synthesis li
 Summary(pl):	Modu³ perla Speech::Rsynth - interfejs do biblioteki syntezy mowy librsynth
 Name:		perl-Speech-Rsynth
 Version:	0.03
-Release:	1
+Release:	2
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	librsynth-devel >= 2.1.4
 %{?_with_tests:BuildRequires:	librsynth-dict-beep}
 BuildRequires:	perl >= 5.6
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -38,7 +38,8 @@ na urz±dzenie d¼wiêkowe.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make} OPTIMIZE="%{rpmcflags}"
 
 %{?_with_tests:%{__make} test}
@@ -55,9 +56,9 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README util/*
-%{perl_sitearch}/Speech/Rsynth.pm
-%dir %{perl_sitearch}/auto/Speech/Rsynth
-%{perl_sitearch}/auto/Speech/Rsynth/autosplit.ix
-%{perl_sitearch}/auto/Speech/Rsynth/*.bs
-%attr(755,root,root) %{perl_sitearch}/auto/Speech/Rsynth/*.so
+%{perl_vendorarch}/Speech/Rsynth.pm
+%dir %{perl_vendorarch}/auto/Speech/Rsynth
+%{perl_vendorarch}/auto/Speech/Rsynth/autosplit.ix
+%{perl_vendorarch}/auto/Speech/Rsynth/*.bs
+%attr(755,root,root) %{perl_vendorarch}/auto/Speech/Rsynth/*.so
 %{_mandir}/man3/*
