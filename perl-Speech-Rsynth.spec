@@ -7,7 +7,7 @@
 %define		pdir	Speech
 %define		pnam	Rsynth
 Summary:	Speech::Rsynth Perl module - interface to librsynth speech synthesis library
-Summary(pl):	Modu³ perla Speech::Rsynth - interfejs do biblioteki syntezy mowy librsynth
+Summary(pl.UTF-8):   ModuÅ‚ perla Speech::Rsynth - interfejs do biblioteki syntezy mowy librsynth
 Name:		perl-Speech-Rsynth
 Version:	0.04
 Release:	1
@@ -30,13 +30,13 @@ Jon Iles' implementation of a Klatt formant synthesizer. It currently
 provides only basic Text-to-Speech (TTS) capabilities, with output to
 file(s) of several formats, as well as directly to an audio device.
 
-%description -l pl
+%description -l pl.UTF-8
 Speech::Rsynth to obiektowo zorientowany interfejs Perla do adaptacji
 Bryana Jurisha pakietu do syntezy mowy "rsynth" Nicka Ing-Simmonsa,
-bazowanej na implementacji Jona Ilesa syntezatora formantów Klatta.
-Modu³ aktualnie udostêpnia tylko podstawowe mo¿liwo¶ci zamiany tekstu
-na mowê, z wyj¶ciem do pliku(ów) w kilku formatach oraz bezpo¶rednio
-na urz±dzenie d¼wiêkowe.
+bazowanej na implementacji Jona Ilesa syntezatora formantÃ³w Klatta.
+ModuÅ‚ aktualnie udostÄ™pnia tylko podstawowe moÅ¼liwoÅ›ci zamiany tekstu
+na mowÄ™, z wyjÅ›ciem do pliku(Ã³w) w kilku formatach oraz bezpoÅ›rednio
+na urzÄ…dzenie dÅºwiÄ™kowe.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
