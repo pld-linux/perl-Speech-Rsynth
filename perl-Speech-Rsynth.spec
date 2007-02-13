@@ -7,7 +7,7 @@
 %define		pdir	Speech
 %define		pnam	Rsynth
 Summary:	Speech::Rsynth Perl module - interface to librsynth speech synthesis library
-Summary(pl.UTF-8):   Moduł perla Speech::Rsynth - interfejs do biblioteki syntezy mowy librsynth
+Summary(pl.UTF-8):	Moduł perla Speech::Rsynth - interfejs do biblioteki syntezy mowy librsynth
 Name:		perl-Speech-Rsynth
 Version:	0.04
 Release:	1
