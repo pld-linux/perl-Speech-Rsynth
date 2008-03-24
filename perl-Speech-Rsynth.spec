@@ -16,6 +16,7 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.ling.uni-potsdam.de/~moocow/projects/spsyn/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	5c3e75c4bba2edd6c00a3fac773099ca
+URL:		http://search.cpan.org/dist/Speech-Rsynth/
 BuildRequires:	gdbm-devel
 BuildRequires:	librsynth-devel >= 2.2.1
 %{?with_tests:BuildRequires:	librsynth-dict-beep}
