@@ -66,6 +66,5 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorarch}/Speech/Rsynth.pm
 %dir %{perl_vendorarch}/auto/Speech/Rsynth
 %{perl_vendorarch}/auto/Speech/Rsynth/autosplit.ix
-%{perl_vendorarch}/auto/Speech/Rsynth/*.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/Speech/Rsynth/*.so
 %{_mandir}/man3/*
