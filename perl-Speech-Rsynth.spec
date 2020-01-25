@@ -3,7 +3,6 @@
 %bcond_with	tests	# perform "make test"
 			# (uses auto device, requires /usr/lib/dict/bDict.db)
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	Speech
 %define		pnam	Rsynth
 Summary:	Speech::Rsynth Perl module - interface to librsynth speech synthesis library
